@@ -14,11 +14,8 @@ import { TruncatePipe } from './truncate.pipe';
     BlogListComponent,
     TruncatePipe
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule],
+  providers: [TruncatePipe],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
