@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-blog-post-tile',
@@ -6,15 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog-post-tile.component.css']
 })
 export class BlogPostTileComponent implements OnInit {
+  @Input() title: string;
+  @Input() summary: string;
+  constructor() {}
 
-  title: string;
-  summary: string;
-  constructor() { }
-
-  ngOnInit() {
-    this.title = "Blog title";
-    this.summary = "Blog post summary";
-
-  }
-
+  ngOnInit() {}
 }
