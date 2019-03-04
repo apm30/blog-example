@@ -14,7 +14,7 @@ export class BlogPostTileComponent implements OnInit {
 
   ngOnInit() {
     this.fullSummary = this.post.summary;
-    this.post.summary = this.truncatePipe.transform(this.post.summary, 3);
+    this.post.summary = this.truncatePipe.transform(this.post.summary, 30);
   }
 
   showFullSummary() {
