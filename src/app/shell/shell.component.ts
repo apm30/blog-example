@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ContentChild } from '@angular/core';
 
 @Component({
   selector: 'app-shell',
@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shell.component.css']
 })
 export class ShellComponent implements OnInit {
-
-  constructor() { }
+  @ContentChild('appHeader') headerElem;
+  constructor() {}
 
   ngOnInit() {
+    this.headerElem.nativeElement.style.color = 'blue';
   }
-
 }
